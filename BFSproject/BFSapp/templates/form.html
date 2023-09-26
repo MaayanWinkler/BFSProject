@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="{%  static 'styles/form.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Insert to DB</h1>
+      <form method="post">
+        <div class="question-row">
+          <label for="cycle">What is your age?</label>
+          <input type="text" id="cycle" name="cycle" />
+        </div>
+        <div class="question-row">
+          <label for="diet">What is your age?</label>
+          <input type="text" id="diet" name="diet" />
+        </div>
+        <div class="question-row">
+          <label for="date">What is your age?</label>
+          <input type="text" id="date" name="date" />
+        </div>
+        <div class="question-row">
+          <label for="temperature">What is your age?</label>
+          <input type="text" id="temperature" name="temperature" />
+        </div>
+        <div class="question-row">
+          <label for="larvae_weight">What is your age?</label>
+          <input type="text" id="larvae_weight" name="larvae_weight" />
+        </div>
+        <div class="question-row">
+          <label for="before_dry">What is your age?</label>
+          <input type="text" id="before_dry" name="before_dry" />
+        </div>
+        <div class="question-row">
+          <label for="after_dry">What is your age?</label>
+          <input type="text" id="after_dry" name="after_dry" />
+        </div>
+        {% csrf_token %}
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

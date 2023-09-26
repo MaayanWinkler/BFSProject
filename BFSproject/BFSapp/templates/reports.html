@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="{% static './styles/reports.css' %}">
+</head>
+<body>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column 6</th>
+                <th>Column 7</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data_from_server %}
+                <tr>
+                    <td>{{ row.col1 }}</td>
+                    <td>{{ row.col2 }}</td>
+                    <td>{{ row.col3 }}</td>
+                    <td>{{ row.col4 }}</td>
+                    <td>{{ row.col5 }}</td>
+                    <td>{{ row.col6 }}</td>
+                    <td>{{ row.col7 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

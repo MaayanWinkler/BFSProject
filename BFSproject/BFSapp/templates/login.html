@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    <title>Login</title>
+    <link rel="stylesheet" href="{%  static 'styles/login.css' %}" />
+  </head>
+  <body>
+    <div class="log-form">
+      <h2>Login to your account</h2>
+      <!-- action="{% url 'user_login' %}" -->
+      <form class = 'login' , name="Login BFS Project", method="post">
+        <input type="text" name="email" id="email" placeholder="Email" />
+        <input type="password" name="password" id="password" placeholder="Password" />
+        <!-- <form action="{% url 'check_user' %}" method="get"> -->
+          {% csrf_token %}
+          <button type="submit" class="btn" >Login</button> 
+        <!-- </form> -->
+      </form>
+    </div>
+  </body>
+</html>
